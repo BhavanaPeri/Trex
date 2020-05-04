@@ -72,7 +72,7 @@ function draw() {
   
   score = score + Math.round(getFrameRate()/60);
   
-  if(keyDown("space")) {
+  if(keyDown("space")&& trex.y>=160) {
     trex.velocityY = -10;
   }
   
@@ -133,7 +133,7 @@ function reset(){
   obstaclesGroup.destroyEach();
   cloudsGroup.destroyEach();
   
-  trex.changeAnimation("trex",trex_running);
+  trex.changeAnimation("running",trex_running);
   
   score = 0;
   
