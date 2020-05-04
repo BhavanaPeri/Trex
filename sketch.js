@@ -13,7 +13,8 @@ var gameOver,restart,gameoverImage,restartImage;
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
-  trex_collided = loadImage("trex_collided.png");
+  
+  trex_collided = loadAnimation("trex_collided.png");
   
   groundImage = loadImage("ground2.png");
   
@@ -100,9 +101,9 @@ function draw() {
     trex.velocityY = 0;
     obstaclesGroup.setVelocityXEach(0);
     cloudsGroup.setVelocityXEach(0);
-    
     //change the trex animation
-    trex.changeAnimation("trex_collided",trex_collided);
+    trex.changeAnimation("collided",trex_collided);
+    
     
     //set lifetime of the game objects so that they are never destroyed
     obstaclesGroup.setLifetimeEach(-1);
